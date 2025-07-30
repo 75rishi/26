@@ -31,15 +31,15 @@
             background: linear-gradient(
                 90deg,
                 #ff0000, #ff9900, #33ff33, #00ccff, #cc00ff,
-                #ff3399, #66ffcc, #ffcc00, #9900ff, #ff6666
+                #ff69b4, #ffff00, #9933ff
             );
-            background-size: 1000%;
+            background-size: 800%;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
             text-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.9),
+                0 0 20px rgba(255, 0, 0, 0.9),
                 0 0 40px rgba(255, 0, 0, 0.8),
                 0 0 60px rgba(0, 255, 255, 0.8),
                 0 0 100px rgba(255, 0, 255, 0.8);
@@ -52,22 +52,35 @@
         .caption {
             font-size: 2rem;
             font-weight: bold;
-            color: #fff;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
+            background: linear-gradient(
+                90deg,
+                #ff0000, #ff9900, #33ff33, #00ccff, #cc00ff,
+                #ff69b4, #ffff00, #9933ff
+            );
+            background-size: 800%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            text-shadow: 
+                0 0 15px rgba(255, 255, 255, 0.7), 
+                0 0 30px rgba(0, 255, 255, 0.5);
             opacity: 0;
-            animation-duration: 2s;
-            animation-fill-mode: forwards;
+            animation: gradientShift 8s ease-in-out infinite, 
+                      slideInLeft 1.5s ease-out forwards;
             margin: 10px 0;
         }
 
         .caption:nth-child(odd) {
             transform: translateX(-100vw);
-            animation: slideInLeft 1.5s ease-out forwards;
+            animation: gradientShift 8s ease-in-out infinite, 
+                      slideInLeft 1.5s ease-out forwards;
         }
 
         .caption:nth-child(even) {
             transform: translateX(100vw);
-            animation: slideInRight 1.5s ease-out forwards;
+            animation: gradientShift 8s ease-in-out infinite, 
+                      slideInRight 1.5s ease-out forwards;
         }
 
         .caption:nth-child(1) { animation-delay: 0.5s; }
@@ -174,7 +187,7 @@
             }
         }
 
-        /* Confetti Explosion */
+        /* Colorful Confetti Explosion */
         .confetti-container {
             position: absolute;
             width: 100%;
@@ -186,15 +199,17 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background: linear-gradient(45deg, #ffd700, #c0c0c0);
             animation: confettiFall 5s linear infinite;
         }
 
-        .confetti:nth-child(odd) { background: linear-gradient(45deg, #c0c0c0, #ffd700); }
-        .confetti:nth-child(1) { left: 20%; animation-delay: 0s; }
-        .confetti:nth-child(2) { left: 40%; animation-delay: 0.5s; }
-        .confetti:nth-child(3) { left: 60%; animation-delay: 1s; }
-        .confetti:nth-child(4) { left: 80%; animation-delay: 1.5s; }
+        .confetti:nth-child(1) { left: 10%; animation-delay: 0s; background: linear-gradient(45deg, #ff0000, #ff6666); }
+        .confetti:nth-child(2) { left: 20%; animation-delay: 0.3s; background: linear-gradient(45deg, #ff9900, #ffcc00); }
+        .confetti:nth-child(3) { left: 30%; animation-delay: 0.6s; background: linear-gradient(45deg, #33ff33, #66ffcc); }
+        .confetti:nth-child(4) { left: 40%; animation-delay: 0.9s; background: linear-gradient(45deg, #00ccff, #3399ff); }
+        .confetti:nth-child(5) { left: 50%; animation-delay: 1.2s; background: linear-gradient(45deg, #cc00ff, #ff69b4); }
+        .confetti:nth-child(6) { left: 60%; animation-delay: 1.5s; background: linear-gradient(45deg, #ffff00, #ffd700); }
+        .confetti:nth-child(7) { left: 70%; animation-delay: 1.8s; background: linear-gradient(45deg, #9933ff, #cc99ff); }
+        .confetti:nth-child(8) { left: 80%; animation-delay: 2.1s; background: linear-gradient(45deg, #ff4081, #ff9999); }
 
         @keyframes confettiFall {
             0% {
@@ -409,6 +424,10 @@
         <div class="balloon"></div>
     </div>
     <div class="confetti-container">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
