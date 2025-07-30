@@ -27,7 +27,7 @@
         }
 
         .glow-text {
-            font-size: 3rem;
+            font-size: 5rem;
             font-weight: 900;
             text-transform: uppercase;
             background: linear-gradient(90deg,
@@ -43,14 +43,14 @@
                 0 0 20px rgba(0, 255, 255, 0.6);
             animation: gradientShift 6s ease-in-out infinite,
                 glowPulse 1.5s ease-in-out infinite;
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
-            margin-bottom: 15px;
+            -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
             will-change: text-shadow, background-position;
         }
 
         .caption {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 2.5rem;
+            font-weight: 900;
             background: linear-gradient(90deg,
                     #990000, #cc6600, #009900, #006699, #660099,
                     #cc0066, #999900, #4d0099);
@@ -62,7 +62,8 @@
             opacity: 0;
             animation: gradientShift 6s ease-in-out infinite,
                 slideInLeft 1s ease-out forwards;
-            margin: 8px 0;
+            margin: 12px 0;
+            -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.7);
             will-change: transform, opacity;
         }
 
@@ -568,12 +569,13 @@
         /* Media Queries for Mobile */
         @media (max-width: 600px) {
             .glow-text {
-                font-size: 2rem;
-                -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.7);
+                font-size: 3rem;
+                -webkit-text-stroke: 0.8px rgba(255, 255, 255, 0.7);
             }
 
             .caption {
-                font-size: 1rem;
+                font-size: 1.5rem;
+                -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.7);
             }
 
             .balloon {
@@ -660,7 +662,7 @@
         <h1 class="glow-text">🎉 MOMO CARD 🎉</h1>
         <div class="caption">Congratulations!</div>
         <div class="caption">You are cordially invited to the Grand Opening</div>
-        <div class="caption">12th August 2025</div>
+        <div class="caption"> 12th August 2025</div>
         <div class="caption">Join us for a spectacular celebration!</div>
         <div class="caption">We look forward to celebrating with you!</div>
         <div class="caption">A new era begins with Momo Card!</div>
